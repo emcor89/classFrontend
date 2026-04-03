@@ -15,7 +15,7 @@ const SubjectList = () => {
   const [searchQuery, setSearchQuery] = React.useState('')
   const [selectedDepartment, setSelectedDepartment] = React.useState('all')  
 
-  const deprartmentFilter = selectedDepartment !== 'all' ? [] : [
+  const departmentFilter = selectedDepartment === 'all' ? [] : [
     { field: 'department', operator: 'eq' as const, value: selectedDepartment }
   ]
   const searchFilter = searchQuery ? [
@@ -59,7 +59,7 @@ const SubjectList = () => {
       resource: 'subjects',
       pagination: {pageSize: 10, mode: 'server',},
       filters: {
-        permanent: [...deprartmentFilter, ...searchFilter],
+        permanent: [...departmentFilter, ...searchFilter],
       },
       sorters: {
         initial: [

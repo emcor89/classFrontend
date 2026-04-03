@@ -13,7 +13,7 @@ export const MOCK_SUBJECTS: Subject[] = [
         id: 2,
         code: "MATH201",
         name: "Calculus II",
-        department: "Math",
+        department: "MATH",
         description: "Advanced study of integration, sequences, series, and power series.",
         createdAt: new Date().toISOString(),
     },
@@ -21,7 +21,7 @@ export const MOCK_SUBJECTS: Subject[] = [
         id: 3,
         code: "ENG102",
         name: "Literature and Composition",
-        department: "English",
+        department: "ENGLISH",
         description: "A course focused on critical reading and writing through the study of various literary genres.",
         createdAt: new Date().toISOString(),
     }
